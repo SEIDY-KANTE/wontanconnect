@@ -1,0 +1,618 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "retry": "Réessayer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "all": "Tous",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "done": "Terminé",
+    "reset": "Réinitialiser",
+    "send": "Envoyer",
+    "seeAll": "Voir tout",
+    "noResults": "Aucun résultat",
+    "optional": "Optionnel",
+    "min": "Min",
+    "max": "Max",
+    "selectDate": "Sélectionnez une date",
+    "selectCountry": "Sélectionnez un pays",
+    "selectCity": "Sélectionnez une ville",
+    "selectCountryFirst": "Sélectionnez d'abord un pays",
+    "deleteSuccess": "Supprimé",
+    "deleteConfirmTitle": "Supprimer l'offre ?",
+    "deleteConfirmMessage": "Cette action est irréversible.",
+    "markCompleted": "Marquer comme terminé",
+    "you": "Vous",
+    "status": {
+      "active": "Actif",
+      "completed": "Terminé",
+      "cancelled": "Annulé"
+    }
+  },
+  "tabs": {
+    "fx": "Change",
+    "shipping": "Transport",
+    "messages": "Messages",
+    "profile": "Profil"
+  },
+  "onboarding": {
+    "slide1": {
+      "title": "Bienvenue sur WontanConnect",
+      "subtitle": "Rejoignez une communauté mondiale de confiance"
+    },
+    "slide2": {
+      "title": "Échangez des devises",
+      "subtitle": "Trouvez les meilleures offres de change dans le monde entier"
+    },
+    "slide3": {
+      "title": "Envoyez vos colis",
+      "subtitle": "Trouvez des transporteurs de confiance pour vos envois"
+    },
+    "getStarted": "Commencer",
+    "skip": "Passer"
+  },
+  "auth": {
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous pour continuer sur WontanConnect",
+      "submit": "Se connecter",
+      "forgot": "Mot de passe oublié ?",
+      "noAccount": "Pas encore de compte ?",
+      "createAccount": "Créer un compte",
+      "guest": "Continuer en invité"
+    },
+    "register": {
+      "title": "Créez votre compte",
+      "subtitle": "Rejoignez un réseau d'échange mondial de confiance",
+      "trustText": "Vos données sont protégées et jamais partagées.",
+      "submit": "Créer le compte",
+      "haveAccount": "Déjà un compte ?",
+      "login": "Se connecter"
+    },
+    "forgot": {
+      "title": "Réinitialiser le mot de passe",
+      "subtitle": "Nous vous envoyons un lien de réinitialisation",
+      "submit": "Envoyer le lien",
+      "back": "Retour à la connexion"
+    },
+    "fields": {
+      "contact": "Email ou téléphone",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe"
+    },
+    "placeholders": {
+      "contact": "nom@email.com ou +90 555 000 000",
+      "password": "Votre mot de passe",
+      "confirmPassword": "Confirmez le mot de passe"
+    },
+    "helpers": {
+      "passwordMin": "Au moins {{count}} caractères"
+    },
+    "errors": {
+      "contactRequired": "Email ou téléphone requis",
+      "contactInvalid": "Entrez un email ou numéro valide",
+      "passwordRequired": "Mot de passe requis",
+      "passwordMin": "Le mot de passe doit faire {{count}} caractères",
+      "confirmRequired": "Confirmez votre mot de passe",
+      "passwordMismatch": "Les mots de passe ne correspondent pas"
+    },
+    "success": {
+      "login": "Ravi de vous revoir !",
+      "register": "Compte créé",
+      "reset": "Lien envoyé",
+      "guest": "Connexion en invité"
+    }
+  },
+  "fx": {
+    "title": "Change",
+    "subtitle": "Trouvez les meilleures offres",
+    "createOffer": "Publier une offre",
+    "myOffers": "Mes offres",
+    "myOffersEmptyTitle": "Aucune offre",
+    "myOffersEmptyMessage": "Publiez votre première offre de change pour la gérer ici",
+    "filters": {
+      "all": "Toutes",
+      "buying": "Achat",
+      "selling": "Vente",
+      "title": "Filtres",
+      "type": "Type d'offre",
+      "fromCurrency": "Devise de départ",
+      "toCurrency": "Devise d'arrivée",
+      "country": "Pays d'échange",
+      "city": "Ville",
+      "amountRange": "Fourchette de montant",
+      "sortBy": "Trier par",
+      "sortNewest": "Plus récent",
+      "sortBestRate": "Meilleur taux",
+      "sortClosest": "Localisation proche"
+    },
+    "from": "De",
+    "to": "Vers",
+    "amount": "Montant",
+    "rate": "Taux",
+    "location": "Localisation",
+    "postedBy": "Publié par",
+    "postedOn": "Publié le",
+    "contactSeller": "Contacter",
+    "emptyTitle": "Aucune offre disponible",
+    "emptyMessage": "Soyez le premier à publier une offre de change",
+    "noResultsTitle": "Aucune offre correspondante",
+    "noResultsMessage": "Essayez d'ajuster vos filtres ou critères de recherche",
+    "clearFilters": "Effacer les filtres",
+    "form": {
+      "title": "Nouvelle offre de change",
+      "editTitle": "Modifier l'offre de change",
+      "fromCurrency": "Devise à échanger",
+      "toCurrency": "Devise souhaitée",
+      "amountFrom": "Montant à échanger",
+      "amountTo": "Montant souhaité (optionnel)",
+      "country": "Pays d'échange",
+      "city": "Ville",
+      "rate": "Taux de change (optionnel)",
+      "ratePlaceholder": "ex: 1 EUR = 11 000 GNF",
+      "rateAuto": "Taux calculé automatiquement",
+      "amountAuto": "Montant mis à jour selon le taux",
+      "ratePreview": "1 {{from}} = {{rate}} {{to}}",
+      "description": "Description",
+      "descriptionPlaceholder": "Ajoutez des détails sur votre offre...",
+      "publish": "Publier l'offre",
+      "success": "Votre offre a été publiée",
+      "updateSuccess": "Offre mise à jour"
+    },
+    "detail": {
+      "trustBanner": "Conseil de sécurité",
+      "trustMessage": "Ne transférez jamais d'argent avant d'avoir vérifié l'identité de la personne. Privilégiez les rencontres en personne.",
+      "contact": "Envoyer un message"
+    }
+  },
+  "shipping": {
+    "title": "Transport",
+    "subtitle": "Colis & Conteneurs",
+    "createOffer": "Publier une annonce",
+    "myOffers": "Mes annonces",
+    "myOffersEmptyTitle": "Aucune annonce",
+    "myOffersEmptyMessage": "Publiez votre première annonce de transport pour la gérer ici",
+    "filters": {
+      "all": "Tous",
+      "parcel": "Colis",
+      "container": "Conteneur",
+      "vehicle": "Véhicule",
+      "title": "Filtres",
+      "type": "Type d'envoi",
+      "fromCountry": "Pays de départ",
+      "fromCity": "Ville de départ",
+      "toCountry": "Pays de destination",
+      "toCity": "Ville de destination",
+      "dateRange": "Période",
+      "dateFrom": "Date de début",
+      "dateTo": "Date de fin",
+      "capacityRange": "Capacité"
+    },
+    "from": "Départ",
+    "to": "Destination",
+    "date": "Date de départ",
+    "capacity": "Capacité",
+    "price": "Tarif",
+    "type": "Type",
+    "types": {
+      "parcel": "Colis",
+      "container": "Conteneur",
+      "vehicle": "Véhicule"
+    },
+    "emptyTitle": "Aucune annonce disponible",
+    "emptyMessage": "Soyez le premier à publier une annonce de transport",
+    "noResultsTitle": "Aucune annonce correspondante",
+    "noResultsMessage": "Essayez d'ajuster vos filtres ou critères de recherche",
+    "clearFilters": "Effacer les filtres",
+    "form": {
+      "title": "Nouvelle annonce de transport",
+      "editTitle": "Modifier l'annonce",
+      "fromCountry": "Pays de départ",
+      "fromCity": "Ville de départ",
+      "toCountry": "Pays de destination",
+      "toCity": "Ville de destination",
+      "departureDate": "Date de départ",
+      "type": "Type de transport",
+      "capacity": "Capacité disponible",
+      "capacityPlaceholder": "ex: 50kg, 2 valises",
+      "price": "Tarif (optionnel)",
+      "pricePlaceholder": "ex: 50€/kg",
+      "description": "Description",
+      "descriptionPlaceholder": "Détails supplémentaires...",
+      "publish": "Publier l'annonce",
+      "success": "Votre annonce a été publiée",
+      "updateSuccess": "Annonce mise à jour"
+    },
+    "detail": {
+      "trustBanner": "Conseil de sécurité",
+      "trustMessage": "Vérifiez toujours les références du transporteur. Demandez un reçu pour vos colis.",
+      "contact": "Contacter le transporteur"
+    }
+  },
+  "messages": {
+    "title": "Messages",
+    "emptyTitle": "Aucune conversation",
+    "emptyMessage": "Vos conversations apparaîtront ici",
+    "inputPlaceholder": "Écrivez votre message...",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Modifier le profil",
+    "settings": "Paramètres",
+    "myOffers": "Mes offres",
+    "myAnnouncements": "Mes annonces",
+    "activeOffers": "{{count}} offres actives",
+    "activeAds": "{{count}} annonces actives",
+    "help": "Aide et support",
+    "about": "À propos",
+    "logout": "Déconnexion",
+    "memberSince": "Membre depuis {{date}}",
+    "edit": {
+      "title": "Modifier le profil",
+      "avatarTitle": "Photo de profil",
+      "avatarSubtitle": "Choisissez une photo qui inspire confiance",
+      "changePhoto": "Changer la photo",
+      "avatarSheetTitle": "Sélectionner une photo",
+      "removePhoto": "Supprimer la photo",
+      "detailsTitle": "Informations personnelles",
+      "name": "Nom complet",
+      "namePlaceholder": "Saisissez votre nom complet",
+      "country": "Pays",
+      "city": "Ville",
+      "language": "Langue préférée",
+      "trustTitle": "Statistiques de confiance",
+      "trustSubtitle": "Visible par les autres utilisateurs",
+      "verified": "Profil vérifié",
+      "saveSuccess": "Profil mis à jour"
+    },
+    "stats": {
+      "offers": "Offres",
+      "deals": "Échanges",
+      "rating": "Note"
+    }
+  },
+  "settings": {
+    "title": "Paramètres",
+    "language": "Langue",
+    "languages": {
+      "en": "English",
+      "fr": "Français",
+      "tr": "Türkçe"
+    },
+    "notifications": "Notifications",
+    "privacy": "Confidentialité",
+    "terms": "Conditions d'utilisation",
+    "help": "Aide et support",
+    "about": "À propos",
+    "version": "Version"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "emptyTitle": "Aucune notification",
+    "emptyMessage": "Vous êtes à jour ! Les nouvelles notifications apparaîtront ici.",
+    "markAllRead": "Tout marquer lu",
+    "types": {
+      "exchangeAccepted": "Échange accepté",
+      "exchangeCompleted": "Échange terminé",
+      "newRequest": "Nouvelle demande",
+      "exchangeCancelled": "Échange annulé"
+    },
+    "messages": {
+      "exchangeAccepted": "Votre demande d'échange a été acceptée. Vous pouvez maintenant procéder à l'échange.",
+      "exchangeCompleted": "Félicitations ! Votre échange a été complété avec succès.",
+      "newRequest": "Vous avez reçu une nouvelle demande d'échange. Examinez et répondez.",
+      "exchangeCancelled": "Un échange a été annulé."
+    },
+    "time": {
+      "minutesAgo": "Il y a {{count}} min",
+      "hoursAgo": "Il y a {{count}} heures",
+      "daysAgo": "Il y a {{count}} jours"
+    }
+  },
+  "currencies": {
+    "GNF": "Franc guinéen",
+    "EUR": "Euro",
+    "USD": "Dollar américain",
+    "TRY": "Livre turque",
+    "XOF": "Franc CFA"
+  },
+  "countries": {
+    "GN": "Guinée",
+    "FR": "France",
+    "US": "États-Unis",
+    "TR": "Turquie",
+    "SN": "Sénégal"
+  },
+  "cities": {
+    "conakry": "Conakry",
+    "paris": "Paris",
+    "istanbul": "Istanbul",
+    "newYork": "New York",
+    "dakar": "Dakar"
+  },
+  "exchange": {
+    "title": "Mes échanges",
+    "fxExchanges": "Échanges de devises",
+    "shippingExchanges": "Échanges de transport",
+    "emptyTitle": "Aucun échange",
+    "emptyMessage": "Vos demandes d'échange et transactions apparaîtront ici",
+    "status": {
+      "pending_approval": "En attente d'approbation",
+      "pending": "En attente",
+      "inProgress": "En cours",
+      "in_progress": "En cours",
+      "in_transit": "En transit",
+      "delivered_pending": "Livré - En attente de confirmation",
+      "completed": "Terminé",
+      "cancelled": "Annulé"
+    },
+    "takeOffer": {
+      "title": "Prendre cette offre",
+      "shippingTitle": "Demander un transport",
+      "subtitle": "Choisissez le montant que vous souhaitez échanger",
+      "selectAmount": "Montant à échanger",
+      "fullAmount": "Montant total",
+      "customAmount": "Montant personnalisé",
+      "customAmountHint": "Max: {{max}}",
+      "youSend": "Vous envoyez",
+      "youReceive": "Vous recevez",
+      "offerDetails": "Détails de l'offre",
+      "summary": "Récapitulatif",
+      "info": "Votre demande sera envoyée au propriétaire de l'offre pour approbation. Une fois acceptée, vous pourrez procéder à l'échange.",
+      "descriptionLabel": "Que voulez-vous envoyer ?",
+      "descriptionPlaceholder": "Décrivez votre colis (type, contenu, dimensions...)",
+      "weightLabel": "Poids estimé (optionnel)",
+      "weightPlaceholder": "ex. 5 kg",
+      "submit": "Envoyer la demande",
+      "success": "Demande envoyée !",
+      "error": "Échec de l'envoi de la demande. Veuillez réessayer.",
+      "errors": {
+        "invalidAmount": "Veuillez entrer un montant valide",
+        "exceedsMax": "Le montant dépasse l'offre disponible"
+      }
+    },
+    "requests": {
+      "title": "Demandes d'échange",
+      "pending": "Demandes en attente",
+      "emptyTitle": "Aucune demande en attente",
+      "emptyMessage": "Les nouvelles demandes d'échange apparaîtront ici",
+      "accept": "Accepter",
+      "decline": "Refuser",
+      "acceptConfirm": "Accepter cette demande d'échange ?",
+      "declineConfirm": "Refuser cette demande d'échange ?",
+      "accepted": "Demande acceptée",
+      "declined": "Demande refusée"
+    },
+    "confirm": {
+      "title": "Confirmer l'échange",
+      "sent": "J'ai envoyé",
+      "received": "J'ai reçu",
+      "shipped": "J'ai expédié",
+      "delivered": "J'ai reçu le colis",
+      "waitingPartner": "En attente de la confirmation du partenaire",
+      "youConfirmed": "Vous avez confirmé",
+      "partnerConfirmed": "Partenaire a confirmé",
+      "bothConfirmed": "Échange terminé !",
+      "confirmQuestion": "Confirmer que vous avez rempli votre part ?",
+      "warning": "Cette action ne peut pas être annulée"
+    },
+    "rating": {
+      "title": "Évaluer cet échange",
+      "subtitle": "Comment s'est passée votre expérience ?",
+      "placeholder": "Ajouter un commentaire (optionnel)",
+      "submit": "Envoyer l'évaluation",
+      "success": "Merci pour votre retour !",
+      "alreadyRated": "Vous avez déjà évalué cet échange"
+    },
+    "chat": {
+      "exchangeInfo": "Détails de l'échange",
+      "status": "Statut",
+      "amount": "Montant",
+      "chatLocked": "Ce chat est maintenant en lecture seule",
+      "chatLockedCancelled": "Cet échange a été annulé. La messagerie est désactivée.",
+      "rateExchange": "Évaluer cet échange"
+    },
+    "detail": {
+      "title": "Détails de l'échange",
+      "partner": "Partenaire d'échange",
+      "yourRole": "Votre rôle",
+      "initiator": "Propriétaire de l'offre",
+      "taker": "Preneur de l'offre",
+      "timeline": "Chronologie",
+      "created": "Créé",
+      "accepted": "Accepté",
+      "completed": "Terminé"
+    },
+    "card": {
+      "with": "avec",
+      "pending": "En attente d'approbation",
+      "viewDetails": "Voir les détails"
+    },
+    "trust": {
+      "badge": {
+        "new": "Nouveau membre",
+        "verified": "Vérifié",
+        "trusted": "De confiance",
+        "top_trader": "Top Trader"
+      },
+      "exchanges": "{{count}} échanges",
+      "rating": "Note de {{rating}}"
+    }
+  },
+  "about": {
+    "title": "À propos",
+    "tagline": "Connecter les gens dans le monde entier",
+    "version": "Version",
+    "whatWeDoTitle": "Ce que nous faisons",
+    "description": "WontanConnect est une plateforme mondiale peer-to-peer qui permet l'échange de devises sécurisé et la coordination des expéditions. Nous connectons les gens au-delà des frontières, rendant les transactions internationales plus simples et accessibles.",
+    "featuresTitle": "Fonctionnalités",
+    "features": {
+      "exchange": "Échange de devises",
+      "exchangeDesc": "Trouvez des partenaires d'échange locaux avec des taux compétitifs",
+      "shipping": "Coordination d'expédition",
+      "shippingDesc": "Connectez-vous avec des voyageurs pour envoyer des colis dans le monde",
+      "trust": "Système de confiance",
+      "trustDesc": "Évaluations vérifiées après les échanges complétés",
+      "messaging": "Messagerie sécurisée",
+      "messagingDesc": "Communication directe avec vos partenaires d'échange"
+    },
+    "trustTitle": "Confiance et sécurité",
+    "trustNote": "Notre système d'évaluation ne s'active qu'après que les échanges sont confirmés par les deux parties. Cela garantit que les avis sont authentiques et basés sur de vraies transactions.",
+    "legalTitle": "Mentions légales",
+    "allRightsReserved": "Tous droits réservés."
+  },
+  "help": {
+    "title": "Aide et support",
+    "faqTitle": "Questions fréquentes",
+    "faq": {
+      "exchanges": {
+        "title": "Comment fonctionnent les sessions d'échange ?",
+        "answer": "Quand vous trouvez une offre qui vous plaît, vous pouvez demander un échange. Le propriétaire de l'offre examine et accepte ou refuse. Une fois accepté, les deux parties complètent l'échange et confirment. Après confirmation des deux, l'échange est marqué comme terminé."
+      },
+      "confirmations": {
+        "title": "Comment fonctionnent les confirmations ?",
+        "answer": "Après avoir rencontré et complété votre échange, les deux parties doivent confirmer dans l'app. Cette double confirmation assure que les deux côtés sont d'accord que l'échange a eu lieu. Ce n'est qu'alors que l'échange est marqué comme complété."
+      },
+      "ratings": {
+        "title": "Comment fonctionnent les évaluations ?",
+        "answer": "Vous ne pouvez évaluer un échange qu'après sa complétion. Les évaluations sont de 1 à 5 étoiles avec un commentaire optionnel. Vos évaluations construisent votre profil de confiance, aidant les autres à décider d'échanger avec vous."
+      },
+      "safety": {
+        "title": "Conseils de sécurité",
+        "answer": "• Rencontrez-vous dans des lieux publics pour les échanges\n• Vérifiez l'identité de l'autre partie\n• Ne partagez jamais d'informations financières sensibles\n• Utilisez la messagerie de l'app pour communiquer\n• Signalez immédiatement tout comportement suspect"
+      }
+    },
+    "contactTitle": "Contacter le support",
+    "contactSubtitle": "Besoin de plus d'aide ? Contactez-nous.",
+    "email": "Email",
+    "emailAddress": "support@wontanconnect.com",
+    "reportIssue": "Signaler un problème",
+    "reportIssueDesc": "Faites-nous savoir si quelque chose ne fonctionne pas",
+    "reportSent": "Signalement envoyé. Nous vous répondrons bientôt."
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "draftNotice": "Brouillon / Ébauche",
+    "lastUpdated": "Dernière mise à jour : Janvier 2026",
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "content": "WontanConnect (\"nous\", \"notre\" ou \"nos\") respecte votre vie privée et s'engage à protéger vos données personnelles. Cette politique explique comment nous collectons, utilisons et protégeons vos informations."
+      },
+      "dataCollected": {
+        "title": "Données collectées",
+        "content": "• Informations de compte (nom, email, téléphone)\n• Données de profil (photo, localisation, préférences)\n• Historique des transactions\n• Messages entre utilisateurs\n• Informations sur l'appareil et l'utilisation"
+      },
+      "dataUse": {
+        "title": "Utilisation des données",
+        "content": "• Pour fournir et améliorer nos services\n• Pour vérifier l'identité et prévenir la fraude\n• Pour permettre la communication entre utilisateurs\n• Pour envoyer des notifications de service\n• Pour respecter les obligations légales"
+      },
+      "dataSharing": {
+        "title": "Partage des données",
+        "content": "Nous ne vendons pas vos données personnelles. Nous pouvons partager des données avec des prestataires qui nous aident à opérer notre plateforme, ou lorsque la loi l'exige."
+      },
+      "security": {
+        "title": "Sécurité",
+        "content": "Nous mettons en œuvre des mesures de sécurité standard pour protéger vos données. Cependant, aucune méthode de transmission sur Internet n'est 100% sécurisée."
+      },
+      "contact": {
+        "title": "Nous contacter",
+        "content": "Pour les questions liées à la confidentialité, contactez-nous à privacy@wontanconnect.com"
+      }
+    }
+  },
+  "terms": {
+    "title": "Conditions d'utilisation",
+    "draftNotice": "Brouillon / Ébauche",
+    "lastUpdated": "Dernière mise à jour : Janvier 2026",
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "content": "Bienvenue sur WontanConnect. En utilisant notre application, vous acceptez ces conditions. Veuillez les lire attentivement."
+      },
+      "services": {
+        "title": "Nos services",
+        "content": "WontanConnect fournit une plateforme pour l'échange de devises peer-to-peer et la coordination d'expédition. Nous ne participons pas directement aux transactions entre utilisateurs."
+      },
+      "responsibilities": {
+        "title": "Responsabilités de l'utilisateur",
+        "content": "• Fournir des informations exactes\n• Maintenir la sécurité du compte\n• Respecter les lois et réglementations locales\n• Traiter les autres utilisateurs avec respect\n• Compléter les échanges de bonne foi"
+      },
+      "prohibited": {
+        "title": "Activités interdites",
+        "content": "• Comportement frauduleux ou trompeur\n• Blanchiment d'argent ou transactions illégales\n• Harcèlement ou abus d'autres utilisateurs\n• Création de comptes multiples\n• Manipulation du système d'évaluation"
+      },
+      "disclaimer": {
+        "title": "Avertissement",
+        "content": "WontanConnect est une plateforme connectant des utilisateurs. Nous ne sommes pas responsables de la conduite des utilisateurs ou du résultat des transactions. Utilisez la plateforme à vos propres risques."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "Pour des questions sur ces conditions, contactez-nous à legal@wontanconnect.com"
+      }
+    }
+  },
+  "guest": {
+    "restriction": {
+      "title": "Compte requis",
+      "message": "Créez un compte gratuit pour débloquer toutes les fonctionnalités et commencer à échanger avec notre communauté de confiance.",
+      "messageWithFeature": "{{feature}} nécessite un compte enregistré. Créez un compte gratuit pour continuer.",
+      "benefitsTitle": "Avec un compte, vous pouvez :",
+      "benefits": {
+        "createOffers": "Créer des offres d'échange de devises et d'expédition",
+        "startExchanges": "Démarrer des échanges avec d'autres membres",
+        "sendMessages": "Envoyer des messages et négocier des accords",
+        "buildTrust": "Construire votre score de confiance et votre réputation"
+      },
+      "register": "Créer un compte gratuit",
+      "login": "J'ai déjà un compte",
+      "later": "Plus tard"
+    },
+    "messagesRestricted": "Messages indisponibles",
+    "messagesDescription": "Créez un compte gratuit pour envoyer des messages aux autres membres et coordonner vos échanges.",
+    "createAccount": "Créer un compte gratuit",
+    "profile": {
+      "badge": "Invité",
+      "title": "Bienvenue sur WontanConnect",
+      "subtitle": "Vous naviguez en tant qu'invité. Créez un compte pour débloquer toutes les fonctionnalités et rejoindre notre communauté de confiance.",
+      "createAccount": "Créer un compte gratuit",
+      "login": "Se connecter",
+      "exitGuest": "Quitter le mode invité",
+      "whyJoin": "Pourquoi rejoindre WontanConnect ?",
+      "communityStats": "Rejoignez notre communauté grandissante",
+      "stats": {
+        "members": "Membres",
+        "exchanges": "Échanges",
+        "rating": "Note moy."
+      },
+      "benefits": {
+        "exchange": {
+          "title": "Échangez des devises et expédiez",
+          "description": "Créez des offres et échangez des devises ou coordonnez l'expédition avec des membres de confiance dans le monde entier."
+        },
+        "messaging": {
+          "title": "Messagerie directe",
+          "description": "Discutez directement avec d'autres membres pour négocier des accords et coordonner les échanges en toute sécurité."
+        },
+        "trust": {
+          "title": "Construisez votre score de confiance",
+          "description": "Gagnez des badges de confiance grâce à des échanges réussis et développez votre réputation dans la communauté."
+        },
+        "notifications": {
+          "title": "Restez informé",
+          "description": "Soyez notifié quand quelqu'un veut échanger avec vous ou quand de nouvelles offres correspondent à vos intérêts."
+        }
+      }
+    }
+  }
+}

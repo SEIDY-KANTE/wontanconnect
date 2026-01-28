@@ -1,0 +1,615 @@
+{
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "retry": "Tekrar dene",
+    "cancel": "İptal",
+    "confirm": "Onayla",
+    "save": "Kaydet",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "search": "Ara",
+    "filter": "Filtrele",
+    "all": "Tümü",
+    "close": "Kapat",
+    "back": "Geri",
+    "next": "İleri",
+    "done": "Tamam",
+    "reset": "Sıfırla",
+    "send": "Gönder",
+    "seeAll": "Tümünü gör",
+    "noResults": "Sonuç bulunamadı",
+    "optional": "İsteğe bağlı",
+    "min": "Min",
+    "max": "Max",
+    "selectDate": "Bir tarih seçin",
+    "selectCountry": "Bir ülke seçin",
+    "selectCity": "Bir şehir seçin",
+    "selectCountryFirst": "Önce bir ülke seçin",
+    "deleteSuccess": "Silindi",
+    "deleteConfirmTitle": "Teklif silinsin mi?",
+    "deleteConfirmMessage": "Bu işlem geri alınamaz.",
+    "markCompleted": "Tamamlandı olarak işaretle",
+    "you": "Siz",
+    "status": {
+      "active": "Aktif",
+      "completed": "Tamamlandı",
+      "cancelled": "İptal edildi"
+    }
+  },
+  "tabs": {
+    "fx": "Döviz",
+    "shipping": "Kargo",
+    "messages": "Mesajlar",
+    "profile": "Profil"
+  },
+  "onboarding": {
+    "slide1": {
+      "title": "WontanConnect'e Hoş Geldiniz",
+      "subtitle": "Dünya çapında güvenilir bir toplulukla bağlantı kurun"
+    },
+    "slide2": {
+      "title": "Döviz Değiştirin",
+      "subtitle": "Dünya çapında en iyi döviz tekliflerini bulun"
+    },
+    "slide3": {
+      "title": "Paketlerinizi Gönderin",
+      "subtitle": "Gönderileriniz için güvenilir taşıyıcılar bulun"
+    },
+    "getStarted": "Başla",
+    "skip": "Atla"
+  },
+  "auth": {
+    "login": {
+      "title": "Tekrar hoş geldiniz",
+      "subtitle": "WontanConnect'e devam etmek için giriş yapın",
+      "submit": "Giriş yap",
+      "forgot": "Şifremi unuttum?",
+      "noAccount": "Hesabınız yok mu?",
+      "createAccount": "Hesap oluştur",
+      "guest": "Misafir olarak devam et"
+    },
+    "register": {
+      "title": "Hesabınızı oluşturun",
+      "subtitle": "Güvenilir küresel değişim ağına katılın",
+      "trustText": "Verileriniz korunur ve asla paylaşılmaz.",
+      "submit": "Hesap oluştur",
+      "haveAccount": "Zaten hesabınız var mı?",
+      "login": "Giriş yap"
+    },
+    "forgot": {
+      "title": "Şifre sıfırla",
+      "subtitle": "Size bir sıfırlama bağlantısı göndereceğiz",
+      "submit": "Sıfırlama bağlantısı gönder",
+      "back": "Girişe geri dön"
+    },
+    "fields": {
+      "contact": "E-posta veya telefon",
+      "password": "Şifre",
+      "confirmPassword": "Şifreyi onayla"
+    },
+    "placeholders": {
+      "contact": "isim@email.com veya +90 555 000 000",
+      "password": "Şifreniz",
+      "confirmPassword": "Şifrenizi tekrar girin"
+    },
+    "helpers": {
+      "passwordMin": "En az {{count}} karakter"
+    },
+    "errors": {
+      "contactRequired": "E-posta veya telefon gerekli",
+      "contactInvalid": "Geçerli bir e-posta veya telefon numarası girin",
+      "passwordRequired": "Şifre gerekli",
+      "passwordMin": "Şifre en az {{count}} karakter olmalı",
+      "confirmRequired": "Şifrenizi onaylayın",
+      "passwordMismatch": "Şifreler eşleşmiyor"
+    },
+    "success": {
+      "login": "Tekrar hoş geldiniz!",
+      "register": "Hesap oluşturuldu",
+      "reset": "Sıfırlama bağlantısı gönderildi",
+      "guest": "Misafir olarak devam ediliyor"
+    }
+  },
+  "fx": {
+    "title": "Döviz",
+    "subtitle": "En iyi teklifleri bulun",
+    "createOffer": "Teklif ver",
+    "myOffers": "Tekliflerim",
+    "myOffersEmptyTitle": "Henüz teklif yok",
+    "myOffersEmptyMessage": "İlk döviz teklifinizi yayınlayarak buradan yönetin",
+    "filters": {
+      "all": "Tümü",
+      "buying": "Alış",
+      "selling": "Satış",
+      "title": "Filtreler",
+      "type": "Teklif türü",
+      "fromCurrency": "Kaynak para birimi",
+      "toCurrency": "Hedef para birimi",
+      "country": "Değişim ülkesi",
+      "city": "Şehir",
+      "amountRange": "Tutar aralığı",
+      "sortBy": "Sırala",
+      "sortNewest": "En yeni",
+      "sortBestRate": "En iyi kur",
+      "sortClosest": "En yakın konum"
+    },
+    "from": "Kaynak",
+    "to": "Hedef",
+    "amount": "Tutar",
+    "rate": "Kur",
+    "location": "Konum",
+    "postedBy": "Yayınlayan",
+    "postedOn": "Yayın tarihi",
+    "contactSeller": "İletişim",
+    "emptyTitle": "Teklif bulunamadı",
+    "emptyMessage": "İlk döviz teklifini yayınlayan siz olun",
+    "noResultsTitle": "Eşleşen teklif yok",
+    "noResultsMessage": "Filtrelerinizi veya arama kriterlerinizi ayarlamayı deneyin",
+    "clearFilters": "Filtreleri temizle",
+    "form": {
+      "title": "Yeni döviz teklifi",
+      "editTitle": "Döviz teklifini düzenle",
+      "fromCurrency": "Değiştirilecek para birimi",
+      "toCurrency": "İstenen para birimi",
+      "amountFrom": "Değiştirilecek tutar",
+      "amountTo": "İstenen tutar (isteğe bağlı)",
+      "country": "Değişim ülkesi",
+      "city": "Şehir",
+      "rate": "Döviz kuru (isteğe bağlı)",
+      "ratePlaceholder": "örn. 1 EUR = 11.000 GNF",
+      "rateAuto": "Kur otomatik hesaplandı",
+      "amountAuto": "Tutar kura göre güncellendi",
+      "ratePreview": "1 {{from}} = {{rate}} {{to}}",
+      "description": "Açıklama",
+      "descriptionPlaceholder": "Teklifiniz hakkında detay ekleyin...",
+      "publish": "Teklifi yayınla",
+      "success": "Teklifiniz yayınlandı",
+      "updateSuccess": "Teklif güncellendi"
+    },
+    "detail": {
+      "trustBanner": "Güvenlik ipucu",
+      "trustMessage": "Kişinin kimliğini doğrulamadan asla para transferi yapmayın. Yüz yüze görüşmeleri tercih edin.",
+      "contact": "Mesaj gönder"
+    }
+  },
+  "shipping": {
+    "title": "Kargo",
+    "subtitle": "Paketler ve Konteynerler",
+    "createOffer": "İlan ver",
+    "myOffers": "İlanlarım",
+    "myOffersEmptyTitle": "Henüz ilan yok",
+    "myOffersEmptyMessage": "İlk kargo ilanınızı yayınlayarak buradan yönetin",
+    "filters": {
+      "all": "Tümü",
+      "parcel": "Paket",
+      "container": "Konteyner",
+      "vehicle": "Araç",
+      "title": "Filtreler",
+      "type": "Gönderi türü",
+      "fromCountry": "Çıkış ülkesi",
+      "fromCity": "Çıkış şehri",
+      "toCountry": "Varış ülkesi",
+      "toCity": "Varış şehri",
+      "dateRange": "Tarih aralığı",
+      "dateFrom": "Başlangıç tarihi",
+      "dateTo": "Bitiş tarihi",
+      "capacityRange": "Kapasite aralığı"
+    },
+    "from": "Çıkış",
+    "to": "Varış",
+    "date": "Hareket tarihi",
+    "capacity": "Kapasite",
+    "price": "Fiyat",
+    "type": "Tür",
+    "types": {
+      "parcel": "Paket",
+      "container": "Konteyner",
+      "vehicle": "Araç"
+    },
+    "emptyTitle": "İlan bulunamadı",
+    "emptyMessage": "İlk kargo ilanını yayınlayan siz olun",
+    "noResultsTitle": "Eşleşen ilan yok",
+    "noResultsMessage": "Filtrelerinizi veya arama kriterlerinizi ayarlamayı deneyin",
+    "clearFilters": "Filtreleri temizle",
+    "form": {
+      "title": "Yeni kargo ilanı",
+      "editTitle": "Kargo ilanını düzenle",
+      "fromCountry": "Çıkış ülkesi",
+      "fromCity": "Çıkış şehri",
+      "toCountry": "Varış ülkesi",
+      "toCity": "Varış şehri",
+      "departureDate": "Hareket tarihi",
+      "type": "Taşıma türü",
+      "capacity": "Mevcut kapasite",
+      "capacityPlaceholder": "örn. 50kg, 2 bavul",
+      "price": "Fiyat (isteğe bağlı)",
+      "pricePlaceholder": "örn. $50/kg",
+      "description": "Açıklama",
+      "descriptionPlaceholder": "Ek detaylar...",
+      "publish": "İlanı yayınla",
+      "success": "İlanınız yayınlandı",
+      "updateSuccess": "İlan güncellendi"
+    },
+    "detail": {
+      "trustBanner": "Güvenlik ipucu",
+      "trustMessage": "Taşıyıcının referanslarını her zaman doğrulayın. Paketleriniz için makbuz isteyin.",
+      "contact": "Taşıyıcıyla iletişime geç"
+    }
+  },
+  "messages": {
+    "title": "Mesajlar",
+    "emptyTitle": "Konuşma yok",
+    "emptyMessage": "Konuşmalarınız burada görünecek",
+    "inputPlaceholder": "Mesajınızı yazın...",
+    "today": "Bugün",
+    "yesterday": "Dün"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Profili düzenle",
+    "settings": "Ayarlar",
+    "myOffers": "Tekliflerim",
+    "myAnnouncements": "İlanlarım",
+    "activeOffers": "{{count}} aktif teklif",
+    "activeAds": "{{count}} aktif ilan",
+    "help": "Yardım ve Destek",
+    "about": "Hakkında",
+    "logout": "Çıkış yap",
+    "memberSince": "{{date}} tarihinden beri üye",
+    "edit": {
+      "title": "Profili düzenle",
+      "avatarTitle": "Profil fotoğrafı",
+      "avatarSubtitle": "Güven oluşturan bir fotoğraf seçin",
+      "changePhoto": "Fotoğrafı değiştir",
+      "avatarSheetTitle": "Bir fotoğraf seçin",
+      "removePhoto": "Fotoğrafı kaldır",
+      "detailsTitle": "Kişisel bilgiler",
+      "name": "Ad soyad",
+      "namePlaceholder": "Adınızı ve soyadınızı girin",
+      "country": "Ülke",
+      "city": "Şehir",
+      "language": "Tercih edilen dil",
+      "trustTitle": "Güven istatistikleri",
+      "trustSubtitle": "Diğer kullanıcılara görünür",
+      "verified": "Doğrulanmış profil",
+      "saveSuccess": "Profil güncellendi"
+    },
+    "stats": {
+      "offers": "Teklifler",
+      "deals": "İşlemler",
+      "rating": "Puan"
+    }
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "language": "Dil",
+    "languages": {
+      "fr": "Français",
+      "en": "English",
+      "tr": "Türkçe"
+    },
+    "notifications": "Bildirimler",
+    "privacy": "Gizlilik",
+    "terms": "Kullanım Şartları",
+    "help": "Yardım ve Destek",
+    "about": "Hakkında",
+    "version": "Sürüm"
+  },
+  "notifications": {
+    "title": "Bildirimler",
+    "emptyTitle": "Bildirim yok",
+    "emptyMessage": "Her şey güncel! Yeni bildirimler burada görünecek.",
+    "markAllRead": "Tümünü okundu işaretle",
+    "types": {
+      "exchangeAccepted": "Değişim Kabul Edildi",
+      "exchangeCompleted": "Değişim Tamamlandı",
+      "newRequest": "Yeni İstek",
+      "exchangeCancelled": "Değişim İptal Edildi"
+    },
+    "messages": {
+      "exchangeAccepted": "Değişim isteğiniz kabul edildi. Artık değişime devam edebilirsiniz.",
+      "exchangeCompleted": "Tebrikler! Değişiminiz başarıyla tamamlandı.",
+      "newRequest": "Yeni bir değişim isteği aldınız. İnceleyin ve yanıt verin.",
+      "exchangeCancelled": "Bir değişim iptal edildi."
+    },
+    "time": {
+      "minutesAgo": "{{count}} dk önce",
+      "hoursAgo": "{{count}} saat önce",
+      "daysAgo": "{{count}} gün önce"
+    }
+  },
+  "currencies": {
+    "GNF": "Gine frangı",
+    "EUR": "Euro",
+    "USD": "ABD Doları",
+    "TRY": "Türk lirası",
+    "XOF": "CFA Frangı"
+  },
+  "countries": {
+    "GN": "Gine",
+    "FR": "Fransa",
+    "US": "Amerika Birleşik Devletleri",
+    "TR": "Türkiye",
+    "SN": "Senegal"
+  },
+  "cities": {
+    "conakry": "Konakri",
+    "paris": "Paris",
+    "istanbul": "İstanbul",
+    "newYork": "New York",
+    "dakar": "Dakar"
+  },
+  "exchange": {
+    "title": "Değişimlerim",
+    "fxExchanges": "Döviz Değişimleri",
+    "shippingExchanges": "Kargo Değişimleri",
+    "emptyTitle": "Henüz değişim yok",
+    "emptyMessage": "Değişim talepleriniz ve işlemleriniz burada görünecek",
+    "status": {
+      "pending_approval": "Onay bekliyor",
+      "in_progress": "Devam ediyor",
+      "in_transit": "Yolda",
+      "delivered_pending": "Teslim edildi - Onay bekliyor",
+      "completed": "Tamamlandı",
+      "cancelled": "İptal edildi"
+    },
+    "takeOffer": {
+      "title": "Bu teklifi al",
+      "shippingTitle": "Kargo talep et",
+      "subtitle": "Değiştirmek istediğiniz tutarı seçin",
+      "selectAmount": "Değiştirilecek tutar",
+      "fullAmount": "Tam tutar",
+      "customAmount": "Özel tutar",
+      "customAmountHint": "Maks: {{max}}",
+      "youSend": "Gönderdiğiniz",
+      "youReceive": "Aldığınız",
+      "offerDetails": "Teklif detayları",
+      "summary": "Özet",
+      "info": "Talebiniz onay için teklif sahibine gönderilecek. Kabul edildikten sonra değişime devam edebilirsiniz.",
+      "descriptionLabel": "Ne göndermek istiyorsunuz?",
+      "descriptionPlaceholder": "Paketinizi tanımlayın (tür, içerik, boyutlar...)",
+      "weightLabel": "Tahmini ağırlık (isteğe bağlı)",
+      "weightPlaceholder": "örn. 5 kg",
+      "submit": "Talep gönder",
+      "success": "Talep gönderildi!",
+      "errors": {
+        "invalidAmount": "Lütfen geçerli bir tutar girin",
+        "exceedsMax": "Tutar mevcut teklifi aşıyor"
+      }
+    },
+    "requests": {
+      "title": "Değişim Talepleri",
+      "pending": "Bekleyen talepler",
+      "emptyTitle": "Bekleyen talep yok",
+      "emptyMessage": "Yeni değişim talepleri burada görünecek",
+      "accept": "Kabul et",
+      "decline": "Reddet",
+      "acceptConfirm": "Bu değişim talebi kabul edilsin mi?",
+      "declineConfirm": "Bu değişim talebi reddedilsin mi?",
+      "accepted": "Talep kabul edildi",
+      "declined": "Talep reddedildi"
+    },
+    "confirm": {
+      "title": "Değişimi Onayla",
+      "sent": "Gönderdim",
+      "received": "Aldım",
+      "shipped": "Gönderdim",
+      "delivered": "Paketi aldım",
+      "waitingPartner": "Partner onayı bekleniyor",
+      "youConfirmed": "Onayladınız",
+      "partnerConfirmed": "Partner onayladı",
+      "bothConfirmed": "Değişim tamamlandı!",
+      "confirmQuestion": "Kendi kısmınızı tamamladığınızı onaylıyor musunuz?",
+      "warning": "Bu işlem geri alınamaz"
+    },
+    "rating": {
+      "title": "Bu değişimi puanlayın",
+      "subtitle": "Deneyiminiz nasıldı?",
+      "placeholder": "Yorum ekleyin (isteğe bağlı)",
+      "submit": "Puanı gönder",
+      "success": "Geri bildiriminiz için teşekkürler!",
+      "alreadyRated": "Bu değişimi zaten puanladınız"
+    },
+    "chat": {
+      "exchangeInfo": "Değişim detayları",
+      "status": "Durum",
+      "amount": "Tutar",
+      "chatLocked": "Bu sohbet artık salt okunur",
+      "chatLockedCancelled": "Bu değişim iptal edildi. Mesajlaşma devre dışı.",
+      "rateExchange": "Bu değişimi puanlayın"
+    },
+    "detail": {
+      "title": "Değişim Detayları",
+      "partner": "Değişim partneri",
+      "yourRole": "Rolünüz",
+      "initiator": "Teklif sahibi",
+      "taker": "Teklif alan",
+      "timeline": "Zaman çizelgesi",
+      "created": "Oluşturuldu",
+      "accepted": "Kabul edildi",
+      "completed": "Tamamlandı"
+    },
+    "card": {
+      "with": "ile",
+      "pending": "Onay bekleniyor",
+      "viewDetails": "Detayları gör"
+    },
+    "trust": {
+      "badge": {
+        "new": "Yeni üye",
+        "verified": "Doğrulanmış",
+        "trusted": "Güvenilir",
+        "top_trader": "En İyi Tüccar"
+      },
+      "exchanges": "{{count}} değişim",
+      "rating": "{{rating}} puan"
+    }
+  },
+  "about": {
+    "title": "Hakkında",
+    "tagline": "Dünya genelinde insanları bağlamak",
+    "version": "Sürüm",
+    "whatWeDoTitle": "Ne yapıyoruz",
+    "description": "WontanConnect, güvenli döviz değişimi ve kargo koordinasyonunu sağlayan küresel bir eşler arası platformdur. Sınırlar ötesinde insanları birbirine bağlayarak uluslararası işlemleri daha basit ve erişilebilir hale getiriyoruz.",
+    "featuresTitle": "Özellikler",
+    "features": {
+      "exchange": "Döviz Değişimi",
+      "exchangeDesc": "Rekabetçi oranlarla yerel değişim ortakları bulun",
+      "shipping": "Kargo Koordinasyonu",
+      "shippingDesc": "Dünya genelinde paket göndermek için yolcularla bağlantı kurun",
+      "trust": "Güven Sistemi",
+      "trustDesc": "Tamamlanan değişimler sonrası doğrulanmış puanlar",
+      "messaging": "Güvenli Mesajlaşma",
+      "messagingDesc": "Değişim ortaklarınızla doğrudan iletişim"
+    },
+    "trustTitle": "Güven ve Güvenlik",
+    "trustNote": "Puanlama sistemimiz yalnızca değişimler her iki tarafça onaylandıktan sonra etkinleşir. Bu, yorumların gerçek işlemlere dayalı ve otantik olmasını sağlar.",
+    "legalTitle": "Yasal",
+    "allRightsReserved": "Tüm hakları saklıdır."
+  },
+  "help": {
+    "title": "Yardım ve Destek",
+    "faqTitle": "Sıkça Sorulan Sorular",
+    "faq": {
+      "exchanges": {
+        "title": "Değişim oturumları nasıl çalışır?",
+        "answer": "Beğendiğiniz bir teklif bulduğunuzda değişim isteği gönderebilirsiniz. Teklif sahibi inceler ve kabul eder ya da reddeder. Kabul edildiğinde her iki taraf değişimi tamamlar ve onaylar. Her iki tarafın onayından sonra değişim tamamlanmış olarak işaretlenir."
+      },
+      "confirmations": {
+        "title": "Onaylar nasıl çalışır?",
+        "answer": "Buluşup değişiminizi tamamladıktan sonra her iki taraf da uygulamada onaylamalıdır. Bu çift onay, her iki tarafın da değişimin gerçekleştiğini kabul etmesini sağlar. Ancak o zaman değişim tamamlanmış olarak işaretlenir."
+      },
+      "ratings": {
+        "title": "Puanlar nasıl çalışır?",
+        "answer": "Bir değişimi ancak tamamlandıktan sonra puanlayabilirsiniz. Puanlar 1-5 yıldız arasındadır ve isteğe bağlı yorum eklenebilir. Puanlarınız güven profilinizi oluşturur ve başkalarının sizinle değişim yapıp yapmayacağına karar vermesine yardımcı olur."
+      },
+      "safety": {
+        "title": "Güvenlik İpuçları",
+        "answer": "• Değişimler için halka açık yerlerde buluşun\n• Karşı tarafın kimliğini doğrulayın\n• Hassas finansal bilgileri asla paylaşmayın\n• İletişim için uygulama mesajlaşmasını kullanın\n• Şüpheli davranışları derhal bildirin"
+      }
+    },
+    "contactTitle": "Destekle İletişim",
+    "contactSubtitle": "Daha fazla yardıma mı ihtiyacınız var? Bize ulaşın.",
+    "email": "E-posta",
+    "emailAddress": "support@wontanconnect.com",
+    "reportIssue": "Sorun Bildir",
+    "reportIssueDesc": "Bir şey düzgün çalışmıyorsa bize bildirin",
+    "reportSent": "Rapor gönderildi. En kısa sürede size geri döneceğiz."
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "draftNotice": "Taslak",
+    "lastUpdated": "Son güncelleme: Ocak 2026",
+    "sections": {
+      "intro": {
+        "title": "Giriş",
+        "content": "WontanConnect (\"biz\" veya \"bizim\") gizliliğinize saygı duyar ve kişisel verilerinizi korumaya kararlıdır. Bu politika, bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar."
+      },
+      "dataCollected": {
+        "title": "Toplanan Veriler",
+        "content": "• Hesap bilgileri (ad, e-posta, telefon)\n• Profil verileri (fotoğraf, konum, tercihler)\n• İşlem geçmişi\n• Kullanıcılar arası mesajlar\n• Cihaz ve kullanım bilgileri"
+      },
+      "dataUse": {
+        "title": "Veri Kullanımı",
+        "content": "• Hizmetlerimizi sağlamak ve iyileştirmek\n• Kimlik doğrulamak ve dolandırıcılığı önlemek\n• Kullanıcılar arası iletişimi sağlamak\n• Hizmet bildirimleri göndermek\n• Yasal yükümlülüklere uymak"
+      },
+      "dataSharing": {
+        "title": "Veri Paylaşımı",
+        "content": "Kişisel verilerinizi satmıyoruz. Platformumuzu işletmemize yardımcı olan hizmet sağlayıcılarla veya yasaların gerektirdiği durumlarda veri paylaşabiliriz."
+      },
+      "security": {
+        "title": "Güvenlik",
+        "content": "Verilerinizi korumak için sektör standardı güvenlik önlemleri uyguluyoruz. Ancak, internet üzerinden hiçbir iletim yöntemi %100 güvenli değildir."
+      },
+      "contact": {
+        "title": "İletişim",
+        "content": "Gizlilikle ilgili sorularınız için privacy@wontanconnect.com adresinden bize ulaşın"
+      }
+    }
+  },
+  "terms": {
+    "title": "Kullanım Koşulları",
+    "draftNotice": "Taslak",
+    "lastUpdated": "Son güncelleme: Ocak 2026",
+    "sections": {
+      "intro": {
+        "title": "Giriş",
+        "content": "WontanConnect'e hoş geldiniz. Uygulamamızı kullanarak bu koşulları kabul etmiş olursunuz. Lütfen dikkatlice okuyun."
+      },
+      "services": {
+        "title": "Hizmetlerimiz",
+        "content": "WontanConnect, eşler arası döviz değişimi ve kargo koordinasyonu için bir platform sağlar. Kullanıcılar arasındaki işlemlere doğrudan katılmıyoruz."
+      },
+      "responsibilities": {
+        "title": "Kullanıcı Sorumlulukları",
+        "content": "• Doğru bilgi sağlamak\n• Hesap güvenliğini korumak\n• Yerel yasa ve düzenlemelere uymak\n• Diğer kullanıcılara saygılı davranmak\n• Değişimleri iyi niyetle tamamlamak"
+      },
+      "prohibited": {
+        "title": "Yasak Faaliyetler",
+        "content": "• Dolandırıcılık veya aldatıcı davranış\n• Kara para aklama veya yasadışı işlemler\n• Diğer kullanıcılara taciz veya istismar\n• Birden fazla hesap oluşturma\n• Puanlama sistemini manipüle etme"
+      },
+      "disclaimer": {
+        "title": "Sorumluluk Reddi",
+        "content": "WontanConnect kullanıcıları birbirine bağlayan bir platformdur. Kullanıcı davranışlarından veya işlemlerin sonuçlarından sorumlu değiliz. Platformu kendi riskinizle kullanın."
+      },
+      "contact": {
+        "title": "İletişim",
+        "content": "Bu koşullarla ilgili sorularınız için legal@wontanconnect.com adresinden bize ulaşın"
+      }
+    }
+  },
+  "guest": {
+    "restriction": {
+      "title": "Hesap Gerekli",
+      "message": "Tüm özelliklerin kilidini açmak ve güvenilir topluluğumuzla değişim başlatmak için ücretsiz bir hesap oluşturun.",
+      "messageWithFeature": "{{feature}} kayıtlı bir hesap gerektirir. Devam etmek için ücretsiz bir hesap oluşturun.",
+      "benefitsTitle": "Bir hesapla şunları yapabilirsiniz:",
+      "benefits": {
+        "createOffers": "Döviz ve kargo teklifleri oluşturma",
+        "startExchanges": "Diğer üyelerle değişim başlatma",
+        "sendMessages": "Mesaj gönderme ve anlaşma yapma",
+        "buildTrust": "Güven puanınızı ve itibarınızı oluşturma"
+      },
+      "register": "Ücretsiz Hesap Oluştur",
+      "login": "Zaten Hesabım Var",
+      "later": "Daha Sonra"
+    },
+    "messagesRestricted": "Mesajlar Kullanılamıyor",
+    "messagesDescription": "Diğer üyelere mesaj göndermek ve değişimlerinizi koordine etmek için ücretsiz bir hesap oluşturun.",
+    "createAccount": "Ücretsiz Hesap Oluştur",
+    "profile": {
+      "badge": "Misafir",
+      "title": "WontanConnect'e Hoş Geldiniz",
+      "subtitle": "Misafir olarak geziniyorsunuz. Tüm özelliklerin kilidini açmak ve güvenilir topluluğumuza katılmak için bir hesap oluşturun.",
+      "createAccount": "Ücretsiz Hesap Oluştur",
+      "login": "Giriş Yap",
+      "exitGuest": "Misafir Modundan Çık",
+      "whyJoin": "Neden WontanConnect'e katılmalısınız?",
+      "communityStats": "Büyüyen Topluluğumuza Katılın",
+      "stats": {
+        "members": "Üyeler",
+        "exchanges": "Değişimler",
+        "rating": "Ort. Puan"
+      },
+      "benefits": {
+        "exchange": {
+          "title": "Döviz Değiştirin ve Gönderi Yapın",
+          "description": "Teklifler oluşturun ve dünya çapında güvenilir üyelerle döviz değiştirin veya kargo koordine edin."
+        },
+        "messaging": {
+          "title": "Doğrudan Mesajlaşma",
+          "description": "Anlaşmaları müzakere etmek ve değişimleri güvenli bir şekilde koordine etmek için diğer üyelerle doğrudan sohbet edin."
+        },
+        "trust": {
+          "title": "Güven Puanınızı Oluşturun",
+          "description": "Başarılı değişimlerle güven rozetleri kazanın ve toplulukta itibarınızı geliştirin."
+        },
+        "notifications": {
+          "title": "Güncel Kalın",
+          "description": "Biri sizinle değişim yapmak istediğinde veya yeni teklifler ilgi alanlarınızla eşleştiğinde bildirim alın."
+        }
+      }
+    }
+  }
+}

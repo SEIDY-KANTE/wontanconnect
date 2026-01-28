@@ -1,0 +1,434 @@
+// Prisma Schema for WontanConnect Backend
+// Version: 1.0.0 - Core v1 (no escrow)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ============================================
+// AUTH & USER
+// ============================================
+
+enum UserRole {
+  guest
+  user
+  support
+  admin
+}
+
+enum UserStatus {
+  active
+  suspended
+  banned
+}
+
+model User {
+  id            String     @id @default(uuid()) @db.Uuid
+  email         String?    @unique
+  phone         String?    @unique
+  passwordHash  String?    @map("password_hash")
+  emailVerified Boolean    @default(false) @map("email_verified")
+  phoneVerified Boolean    @default(false) @map("phone_verified")
+  isGuest       Boolean    @default(false) @map("is_guest")
+  role          UserRole   @default(user)
+  status        UserStatus @default(active)
+  lastLoginAt   DateTime?  @map("last_login_at")
+  createdAt     DateTime   @default(now()) @map("created_at")
+  updatedAt     DateTime   @updatedAt @map("updated_at")
+
+  // Relations
+  profile         Profile?
+  trustProfile    TrustProfile?
+  refreshTokens   RefreshToken[]
+  offers          Offer[]
+  initiatedSessions ExchangeSession[] @relation("InitiatorSessions")
+  respondedSessions ExchangeSession[] @relation("ResponderSessions")
+  cancelledSessions ExchangeSession[] @relation("CancelledBySessions")
+  confirmations   ExchangeConfirmation[]
+  sentMessages    Message[]
+  ratingsGiven    Rating[]       @relation("RaterRatings")
+  ratingsReceived Rating[]       @relation("RateeRatings")
+  notifications   Notification[]
+  auditLogs       AuditLog[]     @relation("ActorAuditLogs")
+  pushTokens      PushToken[]
+
+  @@index([email])
+  @@index([status])
+  @@map("users")
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid()) @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  tokenHash String   @map("token_hash")
+  expiresAt DateTime @map("expires_at")
+  revokedAt DateTime? @map("revoked_at")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([tokenHash])
+  @@map("refresh_tokens")
+}
+
+// ============================================
+// PROFILE & TRUST
+// ============================================
+
+model Profile {
+  id                String   @id @default(uuid()) @db.Uuid
+  userId            String   @unique @map("user_id") @db.Uuid
+  displayName       String   @map("display_name") @db.VarChar(50)
+  avatarUrl         String?  @map("avatar_url")
+  bio               String?  @db.VarChar(500)
+  preferredCurrency String   @default("USD") @map("preferred_currency") @db.VarChar(3)
+  language          String   @default("en") @db.VarChar(5)
+  timezone          String   @default("UTC")
+  locationCity      String?  @map("location_city")
+  locationCountry   String?  @map("location_country") @db.VarChar(2)
+  isKycVerified     Boolean  @default(false) @map("is_kyc_verified")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([locationCountry, locationCity])
+  @@map("profiles")
+}
+
+enum TrustLevel {
+  newcomer
+  trusted
+  verified
+  expert
+}
+
+model TrustProfile {
+  id                  String     @id @default(uuid()) @db.Uuid
+  userId              String     @unique @map("user_id") @db.Uuid
+  totalExchanges      Int        @default(0) @map("total_exchanges")
+  successfulExchanges Int        @default(0) @map("successful_exchanges")
+  totalRatings        Int        @default(0) @map("total_ratings")
+  averageRating       Decimal    @default(0) @map("average_rating") @db.Decimal(3, 2)
+  trustScore          Int        @default(0) @map("trust_score")
+  badges              Json       @default("[]")
+  level               TrustLevel @default(newcomer)
+  updatedAt           DateTime   @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("trust_profiles")
+}
+
+// ============================================
+// OFFERS
+// ============================================
+
+enum OfferType {
+  fx
+  shipping
+}
+
+enum OfferStatus {
+  active
+  paused
+  expired
+  completed
+}
+
+enum RateType {
+  fixed
+  negotiable
+}
+
+model Offer {
+  id              String      @id @default(uuid()) @db.Uuid
+  userId          String      @map("user_id") @db.Uuid
+  type            OfferType
+  status          OfferStatus @default(active)
+  title           String      @db.VarChar(100)
+  description     String?     @db.VarChar(1000)
+  locationCity    String      @map("location_city")
+  locationCountry String      @map("location_country") @db.VarChar(2)
+  expiresAt       DateTime?   @map("expires_at")
+  viewCount       Int         @default(0) @map("view_count")
+  createdAt       DateTime    @default(now()) @map("created_at")
+  updatedAt       DateTime    @updatedAt @map("updated_at")
+
+  // Type-specific fields (nullable based on type)
+  // FX fields
+  sourceCurrency  String?    @map("source_currency") @db.VarChar(3)
+  targetCurrency  String?    @map("target_currency") @db.VarChar(3)
+  sourceAmount    Decimal?   @map("source_amount") @db.Decimal(15, 2)
+  rate            Decimal?   @db.Decimal(10, 6)
+  minAmount       Decimal?   @map("min_amount") @db.Decimal(15, 2)
+  maxAmount       Decimal?   @map("max_amount") @db.Decimal(15, 2)
+  rateType        RateType?  @map("rate_type")
+  paymentMethods  Json?      @map("payment_methods") @default("[]")
+
+  // Shipping fields
+  originCity          String?   @map("origin_city")
+  originCountry       String?   @map("origin_country") @db.VarChar(2)
+  destinationCity     String?   @map("destination_city")
+  destinationCountry  String?   @map("destination_country") @db.VarChar(2)
+  departureDate       DateTime? @map("departure_date") @db.Date
+  arrivalDate         DateTime? @map("arrival_date") @db.Date
+  maxWeightKg         Decimal?  @map("max_weight_kg") @db.Decimal(5, 2)
+  pricePerKg          Decimal?  @map("price_per_kg") @db.Decimal(10, 2)
+  acceptedItems       Json?     @map("accepted_items") @default("[]")
+  restrictedItems     Json?     @map("restricted_items") @default("[]")
+
+  // Relations
+  user     User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sessions ExchangeSession[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([type, status])
+  @@index([locationCountry, locationCity, status])
+  @@index([sourceCurrency, targetCurrency])
+  @@index([originCountry, destinationCountry])
+  @@index([departureDate])
+  @@index([createdAt])
+  @@map("offers")
+}
+
+// ============================================
+// EXCHANGE SESSIONS
+// ============================================
+
+enum SessionStatus {
+  pending
+  accepted
+  declined
+  in_progress
+  awaiting_confirmation
+  completed
+  cancelled
+  disputed
+}
+
+enum ConfirmationType {
+  sent
+  received
+}
+
+model ExchangeSession {
+  id                   String        @id @default(uuid()) @db.Uuid
+  offerId              String        @map("offer_id") @db.Uuid
+  initiatorId          String        @map("initiator_id") @db.Uuid
+  responderId          String        @map("responder_id") @db.Uuid
+  type                 OfferType
+  status               SessionStatus @default(pending)
+  agreedTerms          Json          @map("agreed_terms")
+  initiatorConfirmedAt DateTime?     @map("initiator_confirmed_at")
+  responderConfirmedAt DateTime?     @map("responder_confirmed_at")
+  completedAt          DateTime?     @map("completed_at")
+  cancelledAt          DateTime?     @map("cancelled_at")
+  cancelledById        String?       @map("cancelled_by_id") @db.Uuid
+  cancellationReason   String?       @map("cancellation_reason")
+  disputeId            String?       @map("dispute_id") @db.Uuid
+  createdAt            DateTime      @default(now()) @map("created_at")
+  updatedAt            DateTime      @updatedAt @map("updated_at")
+
+  // Relations
+  offer        Offer                  @relation(fields: [offerId], references: [id])
+  initiator    User                   @relation("InitiatorSessions", fields: [initiatorId], references: [id])
+  responder    User                   @relation("ResponderSessions", fields: [responderId], references: [id])
+  cancelledBy  User?                  @relation("CancelledBySessions", fields: [cancelledById], references: [id])
+  confirmations ExchangeConfirmation[]
+  conversation Conversation?
+  ratings      Rating[]
+
+  @@index([offerId])
+  @@index([initiatorId])
+  @@index([responderId])
+  @@index([status])
+  @@index([initiatorId, responderId])
+  @@map("exchange_sessions")
+}
+
+model ExchangeConfirmation {
+  id          String           @id @default(uuid()) @db.Uuid
+  sessionId   String           @map("session_id") @db.Uuid
+  userId      String           @map("user_id") @db.Uuid
+  type        ConfirmationType
+  confirmedAt DateTime         @default(now()) @map("confirmed_at")
+  evidenceUrl String?          @map("evidence_url")
+  notes       String?          @db.VarChar(500)
+
+  // Relations
+  session ExchangeSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  user    User            @relation(fields: [userId], references: [id])
+
+  @@unique([sessionId, userId, type])
+  @@map("exchange_confirmations")
+}
+
+// ============================================
+// MESSAGING
+// ============================================
+
+model Conversation {
+  id            String    @id @default(uuid()) @db.Uuid
+  sessionId     String    @unique @map("session_id") @db.Uuid
+  participantIds String[] @map("participant_ids") @db.Uuid
+  lastMessageAt DateTime? @map("last_message_at")
+  createdAt     DateTime  @default(now()) @map("created_at")
+
+  // Relations
+  session  ExchangeSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  messages Message[]
+
+  @@index([lastMessageAt])
+  @@map("conversations")
+}
+
+enum MessageType {
+  text
+  image
+  document
+  system
+}
+
+enum MessageStatus {
+  sent
+  delivered
+  seen
+}
+
+model Message {
+  id             String        @id @default(uuid()) @db.Uuid
+  conversationId String        @map("conversation_id") @db.Uuid
+  senderId       String        @map("sender_id") @db.Uuid
+  content        String        @db.VarChar(2000)
+  type           MessageType   @default(text)
+  status         MessageStatus @default(sent)
+  metadata       Json?
+  readAt         DateTime?     @map("read_at")
+  createdAt      DateTime      @default(now()) @map("created_at")
+
+  // Relations
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  sender       User         @relation(fields: [senderId], references: [id])
+
+  @@index([conversationId])
+  @@index([createdAt])
+  @@index([conversationId, createdAt(sort: Desc)])
+  @@map("messages")
+}
+
+// ============================================
+// RATINGS & TRUST
+// ============================================
+
+model Rating {
+  id        String   @id @default(uuid()) @db.Uuid
+  sessionId String   @map("session_id") @db.Uuid
+  raterId   String   @map("rater_id") @db.Uuid
+  rateeId   String   @map("ratee_id") @db.Uuid
+  score     Int      @db.SmallInt // 1-5
+  comment   String?  @db.VarChar(500)
+  tags      Json     @default("[]")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  // Relations
+  session ExchangeSession @relation(fields: [sessionId], references: [id])
+  rater   User            @relation("RaterRatings", fields: [raterId], references: [id])
+  ratee   User            @relation("RateeRatings", fields: [rateeId], references: [id])
+
+  @@unique([sessionId, raterId])
+  @@index([rateeId])
+  @@map("ratings")
+}
+
+// ============================================
+// NOTIFICATIONS
+// ============================================
+
+enum NotificationType {
+  session_request
+  session_accepted
+  session_declined
+  session_cancelled
+  confirmation_received
+  session_completed
+  new_message
+  rating_received
+  offer_expired
+}
+
+enum NotificationChannel {
+  push
+  email
+  in_app
+}
+
+model Notification {
+  id        String              @id @default(uuid()) @db.Uuid
+  userId    String              @map("user_id") @db.Uuid
+  type      NotificationType
+  title     String              @db.VarChar(100)
+  body      String              @db.VarChar(500)
+  data      Json?
+  channel   NotificationChannel @default(in_app)
+  readAt    DateTime?           @map("read_at")
+  sentAt    DateTime?           @map("sent_at")
+  createdAt DateTime            @default(now()) @map("created_at")
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, readAt])
+  @@index([createdAt])
+  @@map("notifications")
+}
+
+model PushToken {
+  id        String   @id @default(uuid()) @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  token     String   @unique
+  platform  String   // ios, android, web
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("push_tokens")
+}
+
+// ============================================
+// AUDIT LOG
+// ============================================
+
+model AuditLog {
+  id         String   @id @default(uuid()) @db.Uuid
+  timestamp  DateTime @default(now())
+  actorId    String?  @map("actor_id") @db.Uuid
+  action     String
+  entityType String   @map("entity_type")
+  entityId   String   @map("entity_id") @db.Uuid
+  oldValues  Json?    @map("old_values")
+  newValues  Json?    @map("new_values")
+  ipAddress  String?  @map("ip_address")
+  userAgent  String?  @map("user_agent")
+  metadata   Json?
+
+  // Relations
+  actor User? @relation("ActorAuditLogs", fields: [actorId], references: [id])
+
+  @@index([timestamp])
+  @@index([actorId])
+  @@index([entityType, entityId])
+  @@index([action])
+  @@map("audit_logs")
+}
